@@ -23,17 +23,19 @@ def a_start(grid, start, goal):
             return path
         for dr, dc in directions:
             nr, nc = current[0] + dr, current[1] + dc
-            if 0<=nr<rows and 0<=nc<cols and grid[nr][nc] == 0:
+            if 0<=nr<rows and 0<=nc<cols and grid[nr][nc] != 1:
                 neighbor = (nr, nc)
                 if neighbor not in visited:
                     g_new = g + 1
                     f_new = g_new + heuristic(neighbor, goal)
                     heapq.heappush(open_list, (f_new, g_new, neighbor, path + [neighbor]))
-    return None
+    return
 start = (0,0)
 goal = (3,3)
 path = a_start(grid, start, goal)
+
 if path:
-    print("Path found: ", path)
+    print("Path found:")
+    print(" -> ".join(map(str, path)))  # Convert each (x, y) tuple to string
 else:
     print("Path not found")
