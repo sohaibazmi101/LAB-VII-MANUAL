@@ -17,9 +17,9 @@ city = pd.DataFrame({
     'temp': np.random.uniform(25, 40, 7).round(1)
 })
 print(city)
-print(f"Maximum: {city.max()}")
-print(f"Minimum Temp: {city.min()}")
-print(f"Average: {city.mean()}")
+print(f"Maximum: {city['temp'].max()}")
+print(f"Minimum Temp: {city['temp'].min()}")
+print(f"Average: {city['temp'].mean().round(1)}")
 
 # Problem 3 mix
 
