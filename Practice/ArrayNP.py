@@ -1,4 +1,5 @@
 import numpy as np
+import kagglehub
 
 # Problem 1
 arr1 = np.arange(10, 51)
@@ -16,3 +17,6 @@ print("Sum: ", np.sum(arr2))
 nums = np.random.randint(1, 101, 10)
 print("Average: ", nums.mean())
 print("Greater Than 50", np.sum(nums > 50))
+path = kagglehub.dataset_download("rockyjoseph/nifty-50-stock-market-data-2000-2023")
+
+print("Path to dataset files:", path)
