@@ -41,6 +41,7 @@ import pandas as pd
 # print(df)
 
 data = pd.read_csv('data.csv')
-print(data.corr())
-data.plot()
-plt.show()
+print(data.info(['Pulse']))
+# print(data.corr())
+# data.plot()
+# plt.show()
